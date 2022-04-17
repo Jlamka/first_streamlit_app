@@ -1,7 +1,6 @@
 import streamlit
 import pandas
 
-
 streamlit.title("My Mom\'s New Healthy Diner")
 streamlit.header('Breakfast Favorites')
 streamlit.text('🥣 Omega 3 & Blueberry Oatmeal')
@@ -24,7 +23,5 @@ import requests
 fruityvise_response = requests.get("https://fruityvice.com/api/fruit/watermelon")
 streamlit.text(fruityvise_response.json())
 
-fruityvice_normalized = pandas.json_normalize(fruityvice_response.json())
 
-streamlit.dataframe(fruityvice_normalized)
 
